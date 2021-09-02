@@ -11,5 +11,21 @@ func Merge(intervalSlice [][]int) [][]int {
 		return intervalSlice[i][0] < intervalSlice[j][0]
 	})
 
-	return intervalSlice
+	returnedIntervals := [][]int{}
+
+	tmpIntervalStart := intervalSlice[0][0]
+	tmpIntervalEnd := intervalSlice[0][1]
+
+	for _, interval := range intervalSlice[0:] {
+
+		if tmpIntervalEnd > interval[0] && tmpIntervalEnd < interval[1] {
+			tmpIntervalEnd = interval[1]
+		} else {
+			tmpIntervalStart = interval[0]
+			tmpIntervalEnd = interval[1]
+		}
+		returnedIntervals = append(returnedIntervals, []int{tmpIntervalStart, tmpIntervalEnd})
+	}
+
+	return returnedIntervals
 }
