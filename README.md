@@ -27,7 +27,7 @@ A startpoint and an endpoint is defined as:
 
 ## Installation
 ### To start using MergingIntervals
-(Hint: if you do not wish to do this manually execute the attached shell-script)
+(Hint: if you do not wish to do this manually execute the attached shell-script named installation.sh)
 ```
 $ mkdir -p $GOPATH/src/github.com/UgurTheG/mergingIntervals/
 $ cd $GOPATH/src/github.com/UgurTheG/mergingIntervals/
