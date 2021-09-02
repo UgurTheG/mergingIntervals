@@ -1,7 +1,7 @@
 # mergingIntervals
 Coding Task 2 - Merge - Ugur Gündüz
 
-MergingIntervals is a simple tool which is able to return a merged slice of intervals in Golang.
+MergingIntervals is a simple tool which is able to return a merged slice of overlapping intervals in Golang.
 
 ## Definition (Assumptions & Constraints)
 An interval is defined as an integer-slice containing only start and endpoints [start, end].
