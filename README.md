@@ -18,7 +18,7 @@ A startpoint and an endpoint is defined as:
 2<sup>64-1</sup> is the maximum integer value in Golang.
 
 ## UML-Class Diagram
-![image info](mergingIntervals.png)
+![mergingIntervals](mergingIntervals.png)
 ## Prerequisites
 - A system running any linux distribution
 - Golang (Recommended Version: latest - 1.17)
