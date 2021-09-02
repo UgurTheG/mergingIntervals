@@ -25,8 +25,9 @@ A startpoint and an endpoint is defined as:
 - Git
 - Internet Connection
 
-## Installation (installation.sh)
+## Installation
 ### To start using MergingIntervals
+(Hint: if you do not wish to do this manually execute the attached shell-script)
 ```
 $ mkdir -p $GOPATH/src/github.com/UgurTheG/mergingIntervals/
 $ cd $GOPATH/src/github.com/UgurTheG/mergingIntervals/
@@ -34,7 +35,7 @@ $ git clone git@github.com:UgurTheG/mergingIntervals.git
 ```
 Now change your directory to the directory of your own project.
 ```
-$ cd <your-project-directory>
+$ cd <your-go-project-directory>
 $ go get github.com/UgurTheG/mergingIntervals
 ```
 ## Usage
@@ -62,13 +63,13 @@ master:~ # go run main.go
 [[2 23] [25 30]]
 ```
 
-## Testing (Makefile)
+## Testing
 
-mergingIntervals was tested with go unit-tests. 
+mergingIntervals was tested using go unit-tests. 
 If you wish to execute the test-cases:
 
 ```
 $ cd $GOPATH/src/github.com/UgurTheG/mergingIntervals/
-$ make test
+$ go test -cover .
 ```
 
