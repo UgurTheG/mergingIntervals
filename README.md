@@ -33,7 +33,9 @@ $ mkdir -p $GOPATH/src/github.com/UgurTheG/mergingIntervals/
 $ cd $GOPATH/src/github.com/UgurTheG/mergingIntervals/
 $ git clone git@github.com:UgurTheG/mergingIntervals.git
 ```
-Now change your directory to the directory of your own project.
+
+
+Next, change your directory to the directory of your own project. Then use the `go get`-command so that the mergingIntervals library will be added to your go.mod file
 ```
 $ cd <your-go-project-directory>
 $ go get github.com/UgurTheG/mergingIntervals
