@@ -29,14 +29,14 @@ func (i Interval) Merge(intervalSlice [][]int) [][]int {
 }
 
 // mergeIntervals returns a slice of merged intervals.
-func (i Interval) mergeIntervals(intervals [][]int) [][]int {
+func (i Interval) mergeIntervals(intervalSlice [][]int) [][]int {
 
 	returnedIntervals := [][]int{}
 	// the start and endpoint of the first interval in the slice is used as a comparison for the following intervals.
-	tmpIntervalStart := intervals[FirstIntervalElement][StartOfInterval]
-	tmpIntervalEnd := intervals[FirstIntervalElement][EndOfInterval]
+	tmpIntervalStart := intervalSlice[FirstIntervalElement][StartOfInterval]
+	tmpIntervalEnd := intervalSlice[FirstIntervalElement][EndOfInterval]
 
-	for _, intervalElement := range intervals {
+	for _, intervalElement := range intervalSlice {
 		// if: If the current interval can be merged with the previous interval, the endpoint of the previous interval is updated with the endpoint of the current interval.
 		if tmpIntervalEnd >= intervalElement[StartOfInterval] && tmpIntervalEnd < intervalElement[EndOfInterval] {
 			tmpIntervalEnd = intervalElement[EndOfInterval]
@@ -54,8 +54,8 @@ func (i Interval) mergeIntervals(intervals [][]int) [][]int {
 }
 
 // sortIntervalsByStart sorts the slice of intervals by its startpoints.
-func (i Interval) sortIntervalsByStart(intervals [][]int) {
-	sort.Slice(intervals, func(firstIntervalIndex, secondIntervalIndex int) bool {
-		return intervals[firstIntervalIndex][StartOfInterval] < intervals[secondIntervalIndex][StartOfInterval]
+func (i Interval) sortIntervalsByStart(intervalSlice [][]int) {
+	sort.Slice(intervalSlice, func(firstIntervalIndex, secondIntervalIndex int) bool {
+		return intervalSlice[firstIntervalIndex][StartOfInterval] < intervalSlice[secondIntervalIndex][StartOfInterval]
 	})
 }
