@@ -1,6 +1,8 @@
-package main
+package mergingIntervals
 
-import "sort"
+import (
+	"sort"
+)
 
 func Merge(intervalSlice [][]int) [][]int {
 	if len(intervalSlice) < 2 {
@@ -17,15 +19,15 @@ func Merge(intervalSlice [][]int) [][]int {
 	tmpIntervalEnd := intervalSlice[0][1]
 
 	for _, interval := range intervalSlice[0:] {
-
-		if tmpIntervalEnd > interval[0] && tmpIntervalEnd < interval[1] {
+		if tmpIntervalEnd >= interval[0] && tmpIntervalEnd < interval[1] {
 			tmpIntervalEnd = interval[1]
-		} else {
+		} else if tmpIntervalEnd < interval[0] {
+			returnedIntervals = append(returnedIntervals, []int{tmpIntervalStart, tmpIntervalEnd})
 			tmpIntervalStart = interval[0]
 			tmpIntervalEnd = interval[1]
 		}
-		returnedIntervals = append(returnedIntervals, []int{tmpIntervalStart, tmpIntervalEnd})
 	}
+	returnedIntervals = append(returnedIntervals, []int{tmpIntervalStart, tmpIntervalEnd})
 
 	return returnedIntervals
 }
