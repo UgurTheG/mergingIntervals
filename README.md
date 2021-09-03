@@ -28,8 +28,8 @@ A startpoint and an endpoint is defined as:
 ## Installation
 ### Install automatically
 ```
-chmod +x installation.sh
-./installation.sh <your-project-directory-path-where-mergingIntervals-will-be-used>
+$ chmod +x installation.sh
+$ ./installation.sh <your-project-directory-path-where-mergingIntervals-will-be-used>
 ```
 
 ### Install manually
